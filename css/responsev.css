@@ -1,0 +1,41 @@
+@media (max-width: 650px) {
+    .HomePageServices .container .first-contant h3 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+@media (min-width: 650px) {
+    .HomePageServices .container .first-contant h3 {
+        font-size: 38px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 990px) {
+    .HomePageServices .container .first-contant h3 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .HomePageServices .container .first-contant h3 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .HomePageServices .container .first-contant h3 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .HomePageServices .container .first-contant h3 {
+        font-size: 42px;
+        line-height: 52px;
+    }
+}
