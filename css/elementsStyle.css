@@ -8,6 +8,10 @@ body {
     font-family: Poppins, sans-serif;
 }
 
+body.dark {
+    background: #000;
+}
+
 .container {
     width: 79%;
     padding: 0 15px;
@@ -26,6 +30,10 @@ h3 {
     font-size: 42px;
     font-weight: 700;
     line-height: 52px;
+}
+
+body.dark h3 {
+    color: #eee;
 }
 
 .btn-primary {
@@ -91,6 +99,10 @@ a.btn-outline-primary:hover {
     font-size: 30px;
 }
 
+body.dark .logo {
+    color: #eee;
+}
+
 header {
     height: 90px;
     padding: 0;
@@ -99,10 +111,29 @@ header {
     background-color: #ffffff;
     transition: all .2s ease;
     z-index: 99 !important;
+    box-shadow: none;
+}
+
+body.dark header {
+    background: #000;
+}
+
+header.scrolled {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 6px 0px;
+    height: 80px;
+
 }
 
 a.logo span {
     color: var(--primary-color);
+}
+
+body.dark header nav .container li a.nav-link {
+    color: #eee;
+}
+
+body.dark header nav .container li a.nav-link:hover {
+    color: var(--secondary-color);
 }
 
 header nav .container li a.nav-link {
@@ -117,7 +148,6 @@ header nav .container li a.nav-link:hover {
 
 header nav .container a.active {
     color: var(--secondary-color) !important;
-    background-color: #fff;
 }
 
 .nav-item {
@@ -137,6 +167,13 @@ header nav a.search-btn {
     text-decoration: none;
     color: var(--secondary-color);
     transition: all .5s ease;
+    background: #f5f6f9;
+    color: #fc3d21;
+}
+
+header.scrolled nav a.search-btn {
+    background: #fc3d21;
+    color: #FFF;
 }
 
 header nav ul.search-list li {
@@ -149,6 +186,7 @@ header nav a.search-btn:hover {
 }
 
 header nav ul.search-list a.Purchase-btn {
+    border: none;
     line-height: 16px;
     font-weight: 400;
     font-size: 16px;
@@ -169,6 +207,14 @@ header nav .dark-mode {
     border: 0;
     font-size: 25px;
     padding-right: 0;
+}
+
+body.dark header .collapse {
+    background: #000 !important;
+}
+
+body.dark header nav .dark-mode {
+    color: #FFF;
 }
 
 /* ----------------- hero-sec STYLE -----------------*/
@@ -242,6 +288,10 @@ pre.chroma {
     line-height: 25.6px;
     font-size: 16px;
     color: #666;
+}
+
+body.dark .code {
+    background: #161616;
 }
 
 .code {

@@ -8,6 +8,10 @@ body {
     font-family: Poppins, sans-serif;
 }
 
+body.dark {
+    background: #000;
+}
+
 .container {
     max-width: 79%;
     padding: 0 15px;
@@ -26,6 +30,10 @@ h3 {
     font-weight: 700;
     line-height: 52px;
     color: var(--heading-color);
+}
+
+body.dark h3 {
+    color: #eee;
 }
 
 p {
@@ -95,6 +103,10 @@ a.btn-outline-primary:hover {
     font-size: 30px;
 }
 
+body.dark .logo {
+    color: #eee;
+}
+
 header {
     height: 90px;
     padding: 0;
@@ -103,10 +115,28 @@ header {
     background-color: #ffffff;
     transition: all .2s ease;
     z-index: 99 !important;
+    box-shadow: none;
+}
+
+body.dark header {
+    background: #000;
+}
+
+header.scrolled {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 6px 0px;
+    height: 80px;
 }
 
 a.logo span {
     color: var(--primary-color);
+}
+
+body.dark header nav .container li a.nav-link {
+    color: #eee;
+}
+
+body.dark header nav .container li a.nav-link:hover {
+    color: var(--secondary-color);
 }
 
 header nav .container li a.nav-link {
@@ -140,6 +170,13 @@ header nav a.search-btn {
     text-decoration: none;
     color: var(--secondary-color);
     transition: all .5s ease;
+    background: #f5f6f9;
+    color: #fc3d21;
+}
+
+header.scrolled nav a.search-btn {
+    background: #fc3d21;
+    color: #FFF;
 }
 
 header nav ul.search-list li {
@@ -152,6 +189,7 @@ header nav a.search-btn:hover {
 }
 
 header nav ul.search-list a.Purchase-btn {
+    border: none;
     line-height: 16px;
     font-weight: 400;
     font-size: 16px;
@@ -172,6 +210,14 @@ header nav .dark-mode {
     border: 0;
     font-size: 25px;
     padding-right: 0;
+}
+
+body.dark header .collapse {
+    background: #000 !important;
+}
+
+body.dark header nav .dark-mode {
+    color: #FFF;
 }
 
 /* ----------------- hero-sec STYLE -----------------*/
@@ -229,6 +275,10 @@ header nav .dark-mode {
 
 /* ----------------- features-sec STYLE -----------------*/
 
+body.dark .features-sec {
+    background-color: #161616;
+}
+
 .features-sec {
     background-color: #f5f6f9;
 }
@@ -249,6 +299,10 @@ header nav .dark-mode {
     cursor: pointer;
 }
 
+body.dark .features-sec h4 a {
+    color: #eee;
+}
+
 .features-sec h4 a {
     text-decoration: none;
     color: var(--heading-color);
@@ -262,6 +316,10 @@ header nav .dark-mode {
 }
 
 /* ----------------- services-sec STYLE -----------------*/
+body.dark .services-sec .about-col {
+    background: #161616;
+}
+
 .services-sec .about-col {
     background-color: #f5f6f9;
     border-radius: 10px;
@@ -294,6 +352,10 @@ header nav .dark-mode {
     margin-bottom: 10px;
 }
 
+body.dark .services-sec .about-col .title a {
+    color: #eee;
+}
+
 .services-sec .about-col .title a {
     text-decoration: none;
     color: var(--heading-color);
@@ -301,6 +363,10 @@ header nav .dark-mode {
     font-weight: 700;
     line-height: 24px;
     transition: all 500ms ease;
+}
+
+body.dark .services-sec .about-col .title a:hover {
+    color: var(--secondary-color);
 }
 
 .services-sec .about-col .title a:hover {

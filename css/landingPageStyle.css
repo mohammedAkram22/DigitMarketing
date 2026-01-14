@@ -8,6 +8,10 @@ body {
     font-family: Poppins, sans-serif;
 }
 
+body.dark {
+    background: #000;
+}
+
 h6 {
     font-size: 16px;
     font-weight: 400;
@@ -20,6 +24,10 @@ h3 {
     font-size: 48px;
     font-weight: 700;
     line-height: 58px;
+}
+
+body.dark h3 {
+    color: #eee;
 }
 
 .btn-primary {
@@ -68,6 +76,10 @@ a.btn-outline-primary:hover {
     font-size: 30px;
 }
 
+body.dark .logo {
+    color: #eee;
+}
+
 header {
     height: 90px;
     padding: 0;
@@ -76,10 +88,29 @@ header {
     background-color: #ffffff;
     transition: all .2s ease;
     z-index: 99 !important;
+    box-shadow: none;
+}
+
+body.dark header {
+    background: #000;
+}
+
+header.scrolled {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 6px 0px;
+    height: 80px;
+
 }
 
 a.logo span {
     color: var(--primary-color);
+}
+
+body.dark header nav .container li a.nav-link {
+    color: #eee;
+}
+
+body.dark header nav .container li a.nav-link:hover {
+    color: var(--secondary-color);
 }
 
 header nav .container li a.nav-link {
@@ -94,7 +125,6 @@ header nav .container li a.nav-link:hover {
 
 header nav .container a.active {
     color: var(--secondary-color) !important;
-    background-color: #fff;
 }
 
 .nav-item {
@@ -114,6 +144,13 @@ header nav a.search-btn {
     text-decoration: none;
     color: var(--secondary-color);
     transition: all .5s ease;
+    background: #f5f6f9;
+    color: #fc3d21;
+}
+
+header.scrolled nav a.search-btn {
+    background: #fc3d21;
+    color: #FFF;
 }
 
 header nav ul.search-list li {
@@ -127,6 +164,7 @@ header nav a.search-btn:hover {
 }
 
 header nav ul.search-list a.Purchase-btn {
+    border: none;
     line-height: 16px;
     font-weight: 400;
     font-size: 16px;
@@ -149,10 +187,22 @@ header nav .dark-mode {
     padding-right: 0;
 }
 
+body.dark header .collapse {
+    background: #000 !important;
+}
+
+body.dark header nav .dark-mode {
+    color: #FFF;
+}
+
 /* ----------------- HERO STYLE -----------------*/
 .hero {
     margin-top: 90px;
     padding: 80px 0;
+}
+
+body.dark .hero .content h3 {
+    color: #eee;
 }
 
 .hero .content h3 {
@@ -209,6 +259,10 @@ header nav .dark-mode {
 }
 
 /* ----------------- HomePageServices Section STYLE -----------------*/
+body.dark .HomePageServices {
+    background-color: #161616;
+}
+
 .HomePageServices {
     background-color: #f5f6f9;
 }
@@ -218,8 +272,16 @@ header nav .dark-mode {
     padding-right: 15px;
 }
 
+body.dark .HomePageServices .container .first-contant h3 {
+    color: #eee;
+}
+
 .HomePageServices .container .first-contant h3 {
     color: var(--heading-color);
+}
+
+body.dark .HomePageServices .container .first-contant p {
+    color: #ddd;
 }
 
 .HomePageServices .container .first-contant p {
@@ -233,6 +295,10 @@ header nav .dark-mode {
     text-decoration: none;
     color: var(--font-color);
 
+}
+
+body.dark .HomePageServices .container .secound-contant h4 {
+    color: #eee;
 }
 
 .HomePageServices .container .secound-contant h4 {
@@ -319,6 +385,10 @@ header nav .dark-mode {
 
 /* ----------------- w3l-products STYLE -----------------*/
 
+body.dark .w3l-products {
+    background-color: #000;
+}
+
 .w3l-products {
     background-color: #f5f6f9;
 }
@@ -387,6 +457,11 @@ h2.resp-accordion {
     padding: 15px 0;
 }
 
+body.dark .products-content h4 {
+    color: var(--primary-color);
+
+}
+
 .products-content h4 {
     margin-top: 10px;
     margin-bottom: 15px;
@@ -411,6 +486,10 @@ h2.resp-accordion {
     padding: 0;
 }
 
+body.dark .products-content ul li {
+    color: #ddd;
+}
+
 .products-content ul li {
     display: list-item;
     list-style: inside;
@@ -432,7 +511,13 @@ h2.resp-accordion {
 }
 
 /* ----------------- cards-sec STYLE -----------------*/
+
+body.dark .cards-sec .card {
+    background: #161616;
+}
+
 .cards-sec .card {
+    padding: 20px;
     border: none;
     text-align: left;
 }
@@ -445,6 +530,10 @@ h2.resp-accordion {
     text-decoration: none;
 }
 
+body.dark .cards-sec .card a h4 {
+    color: #eee;
+}
+
 .cards-sec .card a h4 {
     color: var(--heading-color);
     font-size: 22px;
@@ -454,7 +543,11 @@ h2.resp-accordion {
 }
 
 .cards-sec .card a h4:hover {
-    color: #0b3d91;
+    color: #0b3d91 !important;
+}
+
+body.dark .cards-sec .card p {
+    color: #555;
 }
 
 /* ----------------- video-sec STYLE -----------------*/
@@ -537,12 +630,20 @@ h2.resp-accordion {
 }
 
 /* ----------------- team-sec STYLE -----------------*/
+body.dark .team-sec {
+    background-color: #161616;
+}
+
 .team-sec {
     background-color: #f5f6f9;
 }
 
 .team-sec img {
     border-radius: 10px;
+}
+
+body.dark .team-sec .info a {
+    color: #eee;
 }
 
 .team-sec .info a {
@@ -626,6 +727,18 @@ h2.resp-accordion {
     line-height: 52px;
 }
 
+body.dark .Blogs-sec .blog .cards .card {
+    background: #161616;
+}
+
+.Blogs-sec .blog .cards .card {
+    padding: 20px;
+}
+
+body.dark .Blogs-sec .blog .cards .card-body a {
+    color: #ddd;
+}
+
 .Blogs-sec .blog .cards .card-body a {
     text-decoration: none;
     color: var(--heading-color);
@@ -657,7 +770,15 @@ h2.resp-accordion {
     color: var(--primary-color);
 }
 
+body.dark .Blogs-sec .blog .cards .card-body span {
+    color: #eee;
+}
+
 /* ----------------- ask-sec STYLE -----------------*/
+body.dark .ask-sec {
+    background-color: #161616;
+}
+
 .ask-sec {
     background-color: #f5f6f9;
 }
@@ -689,6 +810,7 @@ h2.resp-accordion {
 }
 
 .ask-sec .accordion button {
+    border: none;
     outline: none;
     font-size: 18.4px;
     font-weight: 700;
@@ -701,9 +823,7 @@ h2.resp-accordion {
 
 .ask-sec .accordion button.collapsed {
     background-color: transparent;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #ddd;
-
+    color: #eee;
 }
 
 .ask-sec .accordion button.collapsed:hover {
@@ -853,6 +973,10 @@ h2.resp-accordion {
     font-size: 18px;
 }
 
+body.dark .contact-sec .list ul .list-item h5 {
+    color: #eee;
+}
+
 .contact-sec .list ul .list-item h5 {
     font-size: 18px;
     font-weight: 700;
@@ -884,6 +1008,10 @@ h2.resp-accordion {
 
 /* ----------------- write-us-sec STYLE -----------------*/
 
+body.dark .write-us-sec {
+    background-color: #161616;
+}
+
 .write-us-sec {
     background-color: #f5f6f9;
 }
@@ -903,6 +1031,7 @@ h2.resp-accordion {
 
 .write-us-sec .inputes input,
 .write-us-sec textarea {
+    background: #161616;
     padding: 12px 20px;
     color: var(--font-color);
     border-radius: 10px;

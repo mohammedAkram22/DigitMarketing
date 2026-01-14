@@ -8,6 +8,10 @@ body {
     font-family: Poppins, sans-serif;
 }
 
+body.dark {
+    background: #000;
+}
+
 .container {
     width: 79%;
     padding: 0 15px;
@@ -25,6 +29,10 @@ h3 {
     font-size: 42px;
     font-weight: 700;
     line-height: 52px;
+}
+
+body.dark h3 {
+    color: #eee;
 }
 
 .btn-primary {
@@ -82,12 +90,20 @@ a.btn-outline-primary:hover {
     transition: all .5s ease;
 }
 
+body.dark p {
+    color: #ddd;
+}
+
 /* ----------------- HEADER STYLE -----------------*/
 
 .logo {
     color: var(--heading-color);
     font-weight: 600;
     font-size: 30px;
+}
+
+body.dark .logo {
+    color: #eee;
 }
 
 header {
@@ -98,10 +114,30 @@ header {
     background-color: #ffffff;
     transition: all .2s ease;
     z-index: 99 !important;
+    box-shadow: none;
 }
+
+body.dark header {
+    background: #000;
+}
+
+header.scrolled {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 6px 0px;
+    height: 80px;
+
+}
+
 
 a.logo span {
     color: var(--primary-color);
+}
+
+body.dark header nav .container li a.nav-link {
+    color: #eee;
+}
+
+body.dark header nav .container li a.nav-link:hover {
+    color: var(--secondary-color);
 }
 
 header nav .container li a.nav-link {
@@ -135,6 +171,13 @@ header nav a.search-btn {
     text-decoration: none;
     color: var(--secondary-color);
     transition: all .5s ease;
+    background: #f5f6f9;
+    color: #fc3d21;
+}
+
+header.scrolled nav a.search-btn {
+    background: #fc3d21;
+    color: #FFF;
 }
 
 header nav ul.search-list li {
@@ -214,7 +257,22 @@ header nav .dark-mode {
     opacity: 1;
 }
 
+body.dark header nav .dark-mode {
+    color: #FFF;
+}
+
+body.dark header .collapse {
+    background: #000 !important;
+}
+
 /* ----------------- about-sec STYLE -----------------*/
+.about h3 {
+    font-size: 35px;
+}
+
+body.dark .about h3 {
+    color: #eee;
+}
 
 .about .container {
     padding-right: 15px;
@@ -228,6 +286,10 @@ header nav .dark-mode {
 .about .container .text p {
     margin: 0;
     color: var(--font-color);
+}
+
+body.dark .about .container .text p {
+    color: #ddd;
 }
 
 .btn-primary:hover {
@@ -245,6 +307,14 @@ header nav .dark-mode {
 
 .w3l-products {
     background-color: #f5f6f9;
+}
+
+body.dark .w3l-products {
+    background-color: #161616;
+}
+
+body.dark .w3l-products .container .header-sec h3 {
+    color: #eee;
 }
 
 .w3l-products .container .header-sec h3 {
@@ -321,6 +391,10 @@ h2.resp-accordion {
 
 }
 
+body.dark .products-content h4 {
+    color: #eee;
+}
+
 .products-content p {
     margin: 0;
     font-size: 16px;
@@ -351,11 +425,18 @@ h2.resp-accordion {
     color: var(--secondary-color);
 }
 
+body.dark .products-content ul li {
+    color: #868686;
+}
+
 .products-content img {
     border-radius: 10px;
 }
 
 /* ----------------- Progress-sec STYLE -----------------*/
+body.dark .Progress-sec .container h3 {
+    color: #eee;
+}
 
 .Progress-sec .container h3 {
     color: var(--heading-color);
@@ -370,6 +451,10 @@ h2.resp-accordion {
 
 .progress-info {
     margin-bottom: 25px;
+}
+
+body.dark .progress-tittle {
+    color: #ddd;
 }
 
 .progress-tittle {
@@ -387,12 +472,20 @@ h2.resp-accordion {
 }
 
 /* ----------------- team-sec STYLE -----------------*/
+body.dark .team-sec {
+    background-color: #161616;
+}
+
 .team-sec {
     background-color: #f5f6f9;
 }
 
 .team-sec img {
     border-radius: 10px;
+}
+
+body.dark .team-sec .info a {
+    color: #ddd;
 }
 
 .team-sec .info a {
@@ -471,10 +564,16 @@ h2.resp-accordion {
 }
 
 /* ----------------- Consultation-sec STYLE -----------------*/
+body.dark .Consultation-sec {
+    background: #1b1b1b;
+}
 
 .Consultation-sec .text h3 {
     color: var(--heading-color);
+}
 
+body.dark .Consultation-sec .text h3 {
+    color: #eee;
 }
 
 .Consultation-sec .linkes {

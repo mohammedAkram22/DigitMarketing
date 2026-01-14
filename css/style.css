@@ -8,6 +8,10 @@ body {
     font-family: Poppins, sans-serif;
 }
 
+body.dark {
+    background: #000;
+}
+
 h6 {
     font-size: 16px;
     font-weight: 400;
@@ -68,6 +72,10 @@ a.btn-outline-primary:hover {
     font-size: 30px;
 }
 
+body.dark .logo {
+    color: #eee;
+}
+
 header {
     height: 90px;
     padding: 0;
@@ -76,10 +84,29 @@ header {
     background-color: #ffffff;
     transition: all .2s ease;
     z-index: 99 !important;
+    box-shadow: none;
+}
+
+body.dark header {
+    background: #000;
+}
+
+header.scrolled {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 6px 0px;
+    height: 80px;
+
 }
 
 a.logo span {
     color: var(--primary-color);
+}
+
+body.dark header nav .container li a.nav-link {
+    color: #eee;
+}
+
+body.dark header nav .container li a.nav-link:hover {
+    color: var(--secondary-color);
 }
 
 header nav .container li a.nav-link {
@@ -113,6 +140,13 @@ header nav a.search-btn {
     text-decoration: none;
     color: var(--secondary-color);
     transition: all .5s ease;
+    background: #f5f6f9;
+    color: #fc3d21;
+}
+
+header.scrolled nav a.search-btn {
+    background: #fc3d21;
+    color: #FFF;
 }
 
 header nav ul.search-list li {
@@ -126,6 +160,7 @@ header nav a.search-btn:hover {
 }
 
 header nav ul.search-list a.Purchase-btn {
+    border: none;
     line-height: 16px;
     font-weight: 400;
     font-size: 16px;
@@ -148,6 +183,10 @@ header nav .dark-mode {
     padding-right: 0;
 }
 
+body.dark header nav .dark-mode {
+    color: #FFF;
+}
+
 /* ----------------- HERO STYLE -----------------*/
 .hero {
     margin-top: 90px;
@@ -160,6 +199,10 @@ header nav .dark-mode {
     font-weight: 400;
 }
 
+body.dark .hero .content h3 {
+    color: #eee;
+}
+
 .hero .content h3 span {
     font-size: 48px;
     font-weight: 800;
@@ -169,6 +212,10 @@ header nav .dark-mode {
     color: var(--font-color);
     font-size: 16px;
     font-weight: 400;
+}
+
+body.dark .hero .content p {
+    color: #ddd;
 }
 
 .hero .slider .carousel {
@@ -212,10 +259,13 @@ header nav .dark-mode {
     background-color: #f5f6f9;
 }
 
+body.dark .HomePageServices {
+    background-color: #161616;
+}
+
 .HomePageServices .container {
     padding-left: 15px;
     padding-right: 15px;
-    /* max-width: 1200px; */
 }
 
 .HomePageServices .container .first-contant h3 {
@@ -225,11 +275,19 @@ header nav .dark-mode {
     font-weight: 600;
 }
 
+body.dark .HomePageServices .container .first-contant h3 {
+    color: #eee;
+}
+
 .HomePageServices .container .first-contant p {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
 
+}
+
+body.dark .HomePageServices .container .first-contant p {
+    color: #ddd;
 }
 
 .HomePageServices .container .secound-contant a {
@@ -244,6 +302,10 @@ header nav .dark-mode {
     line-height: 30px;
     margin: 16px 0 6px;
     color: var(--heading-color);
+}
+
+body.dark .HomePageServices .container .secound-contant h4 {
+    color: #eee;
 }
 
 .HomePageServices .container .secound-contant i {
@@ -321,9 +383,14 @@ header nav .dark-mode {
 }
 
 /* ----------------- cards-sec STYLE -----------------*/
-.cards-sec .card {
+.card {
     border: none;
     text-align: left;
+    padding: 20px;
+}
+
+body.dark .card {
+    background: #161616;
 }
 
 .cards-sec .card img {
@@ -342,8 +409,16 @@ header nav .dark-mode {
     transition: all .5s ease;
 }
 
+body.dark .cards-sec .card a h4 {
+    color: #eee;
+}
+
 .cards-sec .card a h4:hover {
-    color: #0b3d91;
+    color: #0b3d91 !important;
+}
+
+body.dark .cards-sec .card p {
+    color: #acabab;
 }
 
 /* ----------------- video-sec STYLE -----------------*/
@@ -424,10 +499,17 @@ header nav .dark-mode {
     line-height: 52px;
 }
 
+body.dark .Blogs-sec .blog .text h3 {
+    color: #eee;
+}
+
 .Blogs-sec .blog .cards .card-body a {
     text-decoration: none;
     color: var(--heading-color);
+}
 
+body.dark .Blogs-sec .blog .cards .card-body a {
+    color: #ddd;
 }
 
 .Blogs-sec .blog .cards .card-body i {
@@ -455,9 +537,17 @@ header nav .dark-mode {
     color: var(--primary-color);
 }
 
+body.dark .Blogs-sec .blog .cards .card-body span {
+    color: #FFF !important;
+}
+
 /* ----------------- ask-sec STYLE -----------------*/
 .ask-sec {
     background-color: #f5f6f9;
+}
+
+body.dark .ask-sec {
+    background-color: #161616;
 }
 
 .ask-sec .row img {
@@ -468,6 +558,10 @@ header nav .dark-mode {
 .ask-sec .text h3 {
     font-size: 42px;
     line-height: 52px;
+}
+
+body.dark .ask-sec .text h3 {
+    color: #eee;
 }
 
 .ask-sec .text h6 {
@@ -487,6 +581,7 @@ header nav .dark-mode {
 }
 
 .ask-sec .accordion button {
+    border: none !important;
     outline: none;
     font-size: 18.4px;
     font-weight: 700;
@@ -497,11 +592,18 @@ header nav .dark-mode {
     position: relative;
 }
 
+body.dark header .collapse {
+    background: #000 !important;
+}
+
 .ask-sec .accordion button.collapsed {
     background-color: transparent;
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #ddd;
+}
 
+body.dark .ask-sec .accordion button.collapsed {
+    color: #ddd;
 }
 
 .ask-sec .accordion button.collapsed:hover {
@@ -515,6 +617,10 @@ header nav .dark-mode {
     margin: 18px 0;
     color: var(--font-color);
     letter-spacing: .6px;
+}
+
+body.dark .accordion-item:first-of-type .accordion-button {
+    border: none !important;
 }
 
 .accordion-button::before {
@@ -607,9 +713,17 @@ header nav .dark-mode {
 }
 
 /* ----------------- HomePageNewsletter-sec STYLE -----------------*/
+body.dark .HomePageNewsletter-sec {
+    background: #161616;
+}
+
 .HomePageNewsletter h3 {
     font-size: 42px;
     line-height: 52px;
+}
+
+body.dark .HomePageNewsletter h3 {
+    color: #eee;
 }
 
 .subscribe-wthree-field {
@@ -726,6 +840,10 @@ header nav .dark-mode {
 /* ----------------- footer STYLE -----------------*/
 footer {
     background-color: #000;
+}
+
+body.dark footer h3 {
+    color: #eee !important;
 }
 
 footer .logo {

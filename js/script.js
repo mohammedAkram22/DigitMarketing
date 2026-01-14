@@ -13,21 +13,14 @@ $(document).ready(function () {
 });
 // ------------- Top-btn JS  ------------- //
 
-var header = document.querySelector('header');
-var search_btn = document.querySelector('.search-btn');
-var top_btn = document.querySelector('.top_btn');
+const header = document.querySelector('header');
+const top_btn = document.querySelector('.top_btn');
 window.onscroll = () => {
     if (window.scrollY > 90) {
-        header.style.boxShadow = 'rgba(0, 0, 0, 0.05) 0px 3px 6px 0px';
-        header.style.height = '80px';
-        search_btn.style.backgroundColor = "#fc3d21";
-        search_btn.style.color = "#fff";
+        header.classList.add("scrolled")
         top_btn.style.bottom = "20px";
     } else {
-        header.style.boxShadow = 'none';
-        header.style.height = '90px';
-        search_btn.style.backgroundColor = "#f5f6f9";
-        search_btn.style.color = "#fc3d21";
+        header.classList.remove("scrolled")
         top_btn.style.bottom = "-50px";
     }
 }
@@ -38,9 +31,10 @@ top_btn.onclick = () => {
 
 // ------------- Popup JS  ------------- //
 
-var search_btn = document.querySelector('.search-btn');
-var close_btn = document.querySelector('.close_btn');
-var search_sec = document.querySelector('.search-sec');
+// var search_btn = document.querySelector('.search-btn');
+const close_btn = document.querySelector('.close_btn');
+const search_sec = document.querySelector('.search-sec');
+const search_btn = document.querySelector('.search-btn');
 
 search_btn.onclick = () => {
     search_sec.style.opacity = '1';
@@ -49,4 +43,27 @@ search_btn.onclick = () => {
 close_btn.onclick = () => {
     search_sec.style.opacity = '0';
     search_sec.style.visibility = 'hidden';
+}
+
+// dark mood button
+
+window.onload = () => {
+    localStorage.getItem("mood") == "dark" ? document.body.classList.add("dark") : document.body.classList.remove("dark");
+    document.body.classList.contains("dark") ? document.querySelector(".dark-mode i").classList.replace("fa-moon", "fa-sun") : document.querySelector(".dark-mode i").classList.replace("fa-sun", "fa-moon");
+}
+document.querySelector('.dark-mode').onclick = () => {
+    if (localStorage.getItem("mood")) {
+        if (localStorage.getItem("mood") == "dark") {
+            localStorage.setItem("mood", "light");
+            document.body.classList.remove("dark");
+            document.querySelector(".dark-mode i").classList.replace("fa-sun", "fa-moon")
+        } else {
+            localStorage.setItem("mood", "dark");
+            document.body.classList.add("dark");
+            document.querySelector(".dark-mode i").classList.replace("fa-moon", "fa-sun")
+        }
+    }
+    else {
+        localStorage.setItem("mood", "light");
+    }
 }
